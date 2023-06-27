@@ -11,6 +11,6 @@ Feature: Scenario outline practise
       | Azerbaijan  | Baku             |
       | Ukraine     | Kyiv             |
       | Afghanistan | Kabul            |
-      | USA         | Washington, D.C. |
+      | USA         | Washington, D.C |
       | Turkey      | Ankara           |
 

@@ -13,9 +13,10 @@ import org.junit.runner.RunWith;  //coming from junit
         features = "src/test/resources/features",    //copy/path right click from loginfeature
         glue = "com/loop/step_definitions",
         dryRun = false,
-        tags = "@nurdan",
+        tags = "@wip",
         monochrome = true
 )
 
 public class CukesRunner {
+
 }
