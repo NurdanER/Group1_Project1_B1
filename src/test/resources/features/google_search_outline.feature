@@ -14,3 +14,4 @@ Feature: Scenario outline practise
       | USA         | Washington, D.C |
       | Turkey      | Ankara           |
 
+#whole scenario run 5 times

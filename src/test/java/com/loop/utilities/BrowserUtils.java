@@ -1,15 +1,19 @@
 package com.loop.utilities;
 
 import io.cucumber.java.Scenario;
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
-import static org.testng.Assert.assertTrue;
+
 
 public class BrowserUtils {
     /**
@@ -32,7 +36,7 @@ public class BrowserUtils {
             }
         }
 
-        assertTrue(driver.getTitle().toLowerCase().contains(expectedTitle));
+        Assert.assertTrue(driver.getTitle().toLowerCase().contains(expectedTitle));
 
 //This is not a good methocd
 
@@ -70,7 +74,7 @@ public class BrowserUtils {
 
 
     public static void validateTitle(WebDriver driver, String expectedTitle) {
-        assertTrue(driver.getTitle().contains(expectedTitle), "actual does NOT match expected");
+        Assert.assertTrue("actual does NOT match expected",driver.getTitle().contains(expectedTitle) );
 
         /**
          * Click any link from loop practice
@@ -236,11 +240,41 @@ public class BrowserUtils {
         } catch (ClassCastException cce) {
             cce.getMessage();
         }
+    }
+
+    /**
+     *
+     * @param elements
+     * @return
+     */
+
+
+    public static List<String> getElementsText(List<WebElement> elements){
+        List <String> elementsText = new ArrayList<>();
+        for (WebElement element : elements){
+            elementsText.add(element.getText());
+        }
+        return elementsText;
+    }
+
+    public static List<String> getElementsTextWithStream (List<WebElement> elements){
+        return elements.stream()
+                .map(x->x.getText())
+                .collect(Collectors.toList());
+    }
+
+    public static List<String> getElementsTextWithStream2 (List<WebElement> elements){
+        return elements.stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toList());
+    }
+
+
 
     }
 
 
-}
+
 
 
 

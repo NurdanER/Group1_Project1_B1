@@ -12,6 +12,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 public class SmartBearStepDefs {
 
     SmartBearLoginPage loginPage = new SmartBearLoginPage();
@@ -100,9 +102,19 @@ public class SmartBearStepDefs {
         orderPage.viewOrder.click();
         Assert.assertEquals("Expected does not match with actual one", orderPage.name.getText(), name);
 
-
-
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
