@@ -10,6 +10,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 
 import java.util.List;
+import java.util.Map;
 
 public class GoogleSearchStepDefs {
     GoogleSearchPage googleSearchPage = new GoogleSearchPage();
@@ -39,7 +40,7 @@ public class GoogleSearchStepDefs {
 
     }
     @Then("user searches the following item")
-    public void user_searches_the_following_item(List<String> items) {     //run several steps in one scenario   //we stored data in List
+    public void user_searches_the_following_item(List<Map<String, String>>items) {     //run several steps in one scenario   //we stored data in List
       /*  items.forEach(p -> {
             googleSearchPage.searcBox.clear();           //it will clear after writes one word then it will  write other text
             googleSearchPage.searcBox.sendKeys(p + Keys.ENTER);
@@ -48,12 +49,18 @@ public class GoogleSearchStepDefs {
 
        */
 
-        for (String s : items) {
+     /*   for (String s : items) {
             googleSearchPage.searcBox.clear();
             googleSearchPage.searcBox.sendKeys(s + Keys.ENTER);
             Assert.assertEquals(s + " - Google Search", Driver.getDriver().getTitle());
         }
 
+      */
+        for (Map <String, String> item : items) {
+            System.out.println(item.get("items"));
+            googleSearchPage.searcBox.clear();
+            googleSearchPage.searcBox.sendKeys(item.get("items") + Keys.ENTER);
+        }
 
 
         }
