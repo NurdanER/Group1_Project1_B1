@@ -23,7 +23,7 @@ public class LoginStepDefs {
     }
     @When("user enters username for client")
     public void user_enters_username_for_client() {
-        BrowserUtils.waitForClickable(loginPage.loginButton,10);
+        BrowserUtils.waitForClickable(loginPage.loginButton,20);
         loginPage.usernameInput.sendKeys(DocuportConstants.USERNAME_CLIENT);
 
 

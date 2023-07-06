@@ -12,7 +12,7 @@ public class GoogleSearchPage {
 
 
     @FindBy(name = "q")
-    public WebElement searcBox;
+    public WebElement searchBox;
 
 
     @FindBy(xpath="//input[@id='gbqfbb']/preceding-sibling::input")
