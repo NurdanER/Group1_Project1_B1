@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;  //coming from junit
                   "json:target/json-reports/json-report/" },
         features = "src/test/resources/features",    //copy/path right click from loginfeature
         glue = "com/loop/step_definitions",
-        dryRun = false,
-        tags = "@nsuue",
+        dryRun = false,            //generate snippet
+        tags = "@nsu",
         monochrome = true
 )
 

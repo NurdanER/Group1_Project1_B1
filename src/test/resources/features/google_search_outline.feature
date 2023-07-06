@@ -11,7 +11,7 @@ Feature: Scenario outline practise
       | Azerbaijan  | Baku             |
       | Ukraine     | Kyiv             |
       | Afghanistan | Kabul            |
-      | USA         | Washington, D.C |
+      | USA         | Washington, D.C. |
       | Turkey      | Ankara           |
 
 #whole scenario run 5 times

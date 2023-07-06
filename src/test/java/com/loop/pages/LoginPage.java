@@ -21,7 +21,7 @@ public class LoginPage {
     @FindBy(className ="v-btn__content")
     public WebElement loginButton;
 
-    @FindBy(xpath="//span[.='Home']")
+    @FindBy(xpath = "//i[@class='v-icon notranslate v-icon--left mdi mdi-tray-arrow-up theme--light']")
     public WebElement homePage;
 
     /**
