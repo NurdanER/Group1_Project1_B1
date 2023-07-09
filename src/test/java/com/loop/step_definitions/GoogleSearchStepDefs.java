@@ -22,6 +22,8 @@ public class GoogleSearchStepDefs {
     @Given("user is on Google search page")
     public void user_is_on_google_search_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("google.url"));
+        //to run in jenkins;
+
         LOG.info("User is on Google page");
 
     }
