@@ -34,7 +34,10 @@ public class DocuportBasePage {
     @FindBy(xpath = "//label[.='Advisor']/../div/div")
     public WebElement advisorDropdown;
 
-    @FindBy(xpath = "//div[contains(text(),'Batch1 Group1')]")
+    @FindBy(xpath = "//label[contains(text(),'Advisor')]//following-sibling::div[2]")
+    public WebElement advisor2Dropdown;
+
+    @FindBy(xpath = "//div[contains(text(),'Batch1 Group1')]/..")
     public WebElement batch1Group1Option;
 
     @FindBy(xpath = "//button[@type='submit']")
@@ -45,6 +48,26 @@ public class DocuportBasePage {
 
     @FindBy(xpath = "//div[contains(text(),'Bookkeeping')]/../../div/div/div")
     public WebElement bookkeepingDropdown;
+
+
+    @FindBy(xpath="(//div[@aria-haspopup='listbox'])[2]")
+    public WebElement clickOwnerName;
+
+
+
+    @FindBy(xpath = "//i[@class='v-icon notranslate v-icon--left mdi mdi-tune theme--light']")
+    public WebElement searchButton1;
+
+    @FindBy(xpath = "//button[@class='text-none body-2 font-weight-medium v-btn v-btn--has-bg theme--light v-size--default primary']")
+    public WebElement searchButton2;
+
+    public String locateEmail (String email) {
+        Driver.getDriver().findElement(By.xpath("//td[contains(text(),'"+email+"')]")).getText();
+        BrowserUtils.justWait(2);
+
+        return email;
+    }
+
 
 
 
