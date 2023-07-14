@@ -12,17 +12,16 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath= "//input[@id='input-14']")
+    @FindBy(xpath = "//label[.='Username or email']/following-sibling::input")
     public WebElement usernameInput;
 
-    @FindBy(xpath= "//input[@id='input-15']")
+    @FindBy(xpath = "//label[.='Password']/following-sibling::input")
     public WebElement passwordInput;
 
-    @FindBy(className ="v-btn__content")
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;
 
-    @FindBy(xpath = "//i[@class='v-icon notranslate v-icon--left mdi mdi-tray-arrow-up theme--light']")
-    public WebElement homePage;
+
 
 
 
@@ -34,12 +33,12 @@ public class LoginPage {
      */
 
 public void loginDocuport (String username, String password) {
-    BrowserUtils.waitForVisibility(usernameInput,5);
+    BrowserUtils.waitForVisibility(usernameInput,10);
     usernameInput.clear();
     usernameInput.sendKeys(username);
     passwordInput.clear();
     passwordInput.sendKeys(password);
-    BrowserUtils.waitForClickable(loginButton,5);
+    BrowserUtils.waitForClickable(loginButton,10);
     BrowserUtils.clickWithJS(loginButton);
 
 }

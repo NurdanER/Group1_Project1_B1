@@ -14,9 +14,8 @@ public class ClientPage {
     @FindBy(xpath = "//h3[.='Choose account']")
     public WebElement chooseAccountText;
 
-    @FindBy(xpath = "//span[.=' Continue ']")
-    //span[contains(normalize-space(),'Continue')]           //this makes delete spaces
-    public WebElement continueButton;
+
+
 
 
 }
