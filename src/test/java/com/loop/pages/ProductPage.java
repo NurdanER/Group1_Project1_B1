@@ -23,3 +23,4 @@ public class ProductPage {
     }
 
 }
+//normalize-space ignores spaces.

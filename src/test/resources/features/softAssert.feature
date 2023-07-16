@@ -1,5 +1,6 @@
 Feature: sample feature to demo soft assertions
 
+
   @soft
   Scenario: Sample scenarios for soft assertions
     Given user is on Docuport login page
@@ -8,7 +9,8 @@ Feature: sample feature to demo soft assertions
       | password | Group1                |
     And user validates choose account pop up is visible
     And user chooses account from drop down
-
+    And user clicks "continue" button
+    And user clicks "invitations" button
 
 
     #with help of soft assertions, I can continue testing even if the step was failed..

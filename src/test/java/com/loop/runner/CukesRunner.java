@@ -12,14 +12,17 @@ import org.junit.runner.RunWith;  //coming from junit
                 "json:target/json-reports/json-report",
                 "rerun:target/rerun.txt",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-        features = "src/test/resources/features",    //copy/path right click from loginfeature
-        glue = "com/loop/step_definitions",
+        features = "src/test/resources/features",    //copy/path right click from loginfeature   //busniess part of cucumber
+        glue = "com/loop/step_definitions", //cucumber the location of our step definitions   //glue tells the code
         dryRun = false,            //generate snippet
-        tags = "@soft",
-        monochrome = true,
-        publish = true
+        tags = "@va",    //which tag we wanna run
+        monochrome = true,    //extra log
+        publish = false   //publishing run in somewhere
 )
 
 public class CukesRunner {
 
 }
+
+
+//In Big project we can have more than one runner classes, instead of playing with tag each runner class run different tags

@@ -1,6 +1,7 @@
 package com.loop.step_definitions;
 
 import com.loop.pages.ClientPage;
+import com.loop.pages.DocuportBasePage;
 import com.loop.utilities.BrowserUtils;
 import com.loop.utilities.ConfigurationReader;
 import com.loop.utilities.Driver;
@@ -17,6 +18,7 @@ public class ClientStepDefs {
     private static final Logger LOG = LogManager.getLogger();
 
     ClientPage clientPage = new ClientPage();
+    DocuportBasePage docuportBasePage = new DocuportBasePage();
 
     private SoftAssertions softAssertions = new SoftAssertions ();
 
@@ -34,12 +36,21 @@ public class ClientStepDefs {
 
     @When("user chooses account from drop down")
     public void user_chooses_account_from_drop_down() {
-        //BrowserUtils.waitForVisibility(clientPage.continueButton,5);
+       // BrowserUtils.waitForVisibility(clientPage.continueButton,5);
        // assertTrue(clientPage.continueButton.isDisplayed());
-        softAssertions.assertThat(clientPage.continueButton.isDisplayed()).isTrue();
-        softAssertions.assertThat(clientPage.continueButton.getText()).isEqualTo("Loop Academy");
-        clientPage.continueButton.click();
+        softAssertions.assertThat(docuportBasePage.continueB.isDisplayed()).isTrue();
+        softAssertions.assertThat(docuportBasePage.continueB.getText()).isEqualTo("Loop Academy");
         softAssertions.assertAll();      //shows which one is failed
+
+
+
+    }
+    @When("user clicks {string} button")
+    public void user_clicks_button(String button) {
+        docuportBasePage.clickButton(button);
+        BrowserUtils.justWait(3);
+
+
 
 
 

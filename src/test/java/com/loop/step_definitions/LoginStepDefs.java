@@ -1,5 +1,6 @@
 package com.loop.step_definitions;
 
+import com.loop.pages.DocuportBasePage;
 import com.loop.pages.LoginPage;
 import com.loop.utilities.BrowserUtils;
 import com.loop.utilities.ConfigurationReader;
@@ -15,6 +16,7 @@ import java.util.Map;
 
 public class LoginStepDefs {
     LoginPage loginPage =  new LoginPage();
+    DocuportBasePage docuportBasePage = new DocuportBasePage();
 
     @Given("user is on Docuport login page")
     public void user_is_on_docuport_login_page() {
@@ -42,7 +44,7 @@ public class LoginStepDefs {
     }
     @Then("user should see the home page for client")
     public void user_should_see_the_home_page_for_client() {
-        loginPage.homePage.isDisplayed();
+        docuportBasePage.homePage.isDisplayed();
 
     }
 
@@ -61,7 +63,7 @@ public class LoginStepDefs {
 
     @Then("user should see the home page for employee")
     public void user_should_see_the_home_page_for_employee() {
-        loginPage.homePage.isDisplayed();
+        docuportBasePage.homePage.isDisplayed();
 
     }
     @When("user enters username for advisor")
@@ -77,7 +79,7 @@ public class LoginStepDefs {
     }
     @Then("user should see the home page for advisor")
     public void user_should_see_the_home_page_for_advisor() {
-        loginPage.homePage.isDisplayed();
+        docuportBasePage.homePage.isDisplayed();
 
     }
     @When("user enters username for admin")
