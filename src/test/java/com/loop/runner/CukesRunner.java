@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;  //coming from junit
         features = "src/test/resources/features",    //copy/path right click from loginfeature   //busniess part of cucumber
         glue = "com/loop/step_definitions", //cucumber the location of our step definitions   //glue tells the code
         dryRun = false,            //generate snippet
-        tags = "@va",    //which tag we wanna run
+        tags = "@nana",    //which tag we wanna run
         monochrome = true,    //extra log
         publish = false   //publishing run in somewhere
 )

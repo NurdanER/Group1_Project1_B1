@@ -40,7 +40,7 @@ public class ValidationStepDef {
     public void user_clicks_on_item(String button) {
             docuportBasePage.clickButton(button);
             BrowserUtils.justWait(7);
-            LOG.info("User clicks button successfully");
+            LOG.info("User clicks " +button+ " successfully");
         }
 
     @When("user validates {string} is displayed")
