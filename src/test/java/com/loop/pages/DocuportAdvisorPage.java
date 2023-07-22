@@ -53,8 +53,17 @@ public class DocuportAdvisorPage {
     @FindBy(xpath="(//div[@aria-haspopup='listbox'])[2]")
     public WebElement clickOwnerName;
 
+    @FindBy(xpath = "//div[@class='v-select__selections']")
+    public WebElement rowsPerPageNumber;
+
+    @FindBy(xpath="//i[@class='v-icon notranslate mdi mdi-menu-down theme--light']")
+    public WebElement pageNumberDropdown;
 
 
+
+    public void changeRowsPerPageNumbers (Integer num) {
+        Driver.getDriver().findElement(By.xpath("//div[@class='v-list-item__content'][.='"+num+"']")).click();
+    }
 
 
     public String locateEmail (String email) {

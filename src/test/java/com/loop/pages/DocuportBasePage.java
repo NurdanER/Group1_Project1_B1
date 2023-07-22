@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class DocuportBasePage {
     public DocuportBasePage() {
+
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -20,6 +21,7 @@ public class DocuportBasePage {
     //span[contains(normalize-space(),'Continue')]           //this makes delete spaces
     @FindBy(xpath = "//span[.=' Continue ']")
     public WebElement continueB;
+
     public void clickButton (String button) {
         switch(button.toLowerCase()) {
             case "continue":
@@ -36,6 +38,13 @@ public class DocuportBasePage {
             case "myuploads":
                 myUploadsPage.click();
                 break;
+            case"leads":
+                 leadsPage.click();
+                 break;
+            case"users":
+                usersPage.click();
+                break;
+
         }
     }
 
@@ -45,6 +54,11 @@ public class DocuportBasePage {
 
     @FindBy(xpath = "//span[.='My uploads']")
     public WebElement myUploadsPage;
+
+    @FindBy(xpath = "//span[.='Leads']")
+    public WebElement leadsPage;
+    @FindBy(xpath = "//span[.='Users']")
+    public WebElement usersPage;
 
 
 
@@ -62,6 +76,7 @@ public class DocuportBasePage {
             case"download":
                 downloadButton.isDisplayed();
                 break;
+
         }
     }
 
