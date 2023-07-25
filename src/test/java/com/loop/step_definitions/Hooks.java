@@ -1,6 +1,8 @@
 package com.loop.step_definitions;
 
 import com.loop.utilities.BrowserUtils;
+import com.loop.utilities.ConfigurationReader;
+import com.loop.utilities.DB_Util;
 import com.loop.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -39,5 +41,21 @@ public class Hooks {
 
 
 }
+    @Before ("@db")
+    public void setUpDB(){
+        String ip = ConfigurationReader.getProperty("docuportUrl");
+        String un = ConfigurationReader.getProperty("dbUserName");
+        String pw = ConfigurationReader.getProperty("dbPassword");
+
+        DB_Util.createConnection(ip, un, pw);
+    }
+
+
+    @After("@db")
+    public void destroyDB () {
+        DB_Util.destroy();
+    }
+
+
 
 }
