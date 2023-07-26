@@ -16,10 +16,10 @@ public class DocuportBasePage {
 
     @FindBy(xpath = "//i[@class='v-icon notranslate mdi mdi-home theme--light']")
     public WebElement homePage;
-    //<i aria-hidden="true" class="v-icon notranslate mdi mdi-home theme--light"></i>
+
     @FindBy(xpath = "//span[contains(text(),'Invitations')]")
     public WebElement invitationsButton;
-    //span[contains(normalize-space(),'Continue')]           //this makes delete spaces
+
     @FindBy(xpath = "//span[.=' Continue ']")
     public WebElement continueB;
 
