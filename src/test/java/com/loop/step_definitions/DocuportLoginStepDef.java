@@ -28,7 +28,6 @@ public class DocuportLoginStepDef {
     @When("user enters credentials for supervisor role")
     public void user_enters_credentials_for_supervisor_role() {
         loginPage.loginDocuport(ConfigurationReader.getProperty("supervisor"),ConfigurationReader.getProperty("password"));
-
         LOG.info("User successfully logged in as an Supervisor");
 
     }
