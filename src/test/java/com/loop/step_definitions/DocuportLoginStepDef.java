@@ -69,7 +69,7 @@ public class DocuportLoginStepDef {
     @Then("user should see the home page for client")
     public void user_should_see_the_home_page_for_client() {
         Assert.assertTrue("Login unsuccessful", docuportBasePage.homePage.isDisplayed());
-        LOG.info("Home Page for supervisor is displayed");
+        LOG.info("Home Page for client is displayed");
 
 
     }
