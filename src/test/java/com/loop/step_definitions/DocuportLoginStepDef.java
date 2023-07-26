@@ -12,6 +12,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 
+import java.util.Map;
+
 public class DocuportLoginStepDef {
 
     LoginPage loginPage = new LoginPage();
@@ -52,6 +54,7 @@ public class DocuportLoginStepDef {
         LOG.info("Home Page for advisor is displayed");
 
     }
+
     @When("user enters credentials for advisor role")
     public void user_enters_credentials_for_advisor_role() {
         loginPage.loginDocuport(ConfigurationReader.getProperty("advisor"),ConfigurationReader.getProperty("password"));
@@ -73,8 +76,21 @@ public class DocuportLoginStepDef {
 
 
     }
+    @When("user enters credentials")
+    public void user_enters_credentials(Map< String, String> credentials) {
+        for(Map.Entry<String, String> entry : credentials.entrySet()){
+            String key =entry.getKey();
+            System.out.println("key = " +key);
+            String value =entry.getValue();
+            System.out.println("value = " + value);
+        }
+       loginPage.loginDocuport(credentials.get("username"), credentials.get("password"));
+        LOG.info("Home Page with Map practice for client is displayed");
 
 
+
+
+    }
 
 
 }
