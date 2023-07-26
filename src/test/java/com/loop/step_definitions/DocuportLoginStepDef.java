@@ -60,6 +60,21 @@ public class DocuportLoginStepDef {
 
     }
 
+    @When("user enters credentials for client role")
+    public void user_enters_credentials_for_client_role() {
+        loginPage.loginDocuport(ConfigurationReader.getProperty("client"), ConfigurationReader.getProperty("password"));
+        LOG.info("User successfully logged in as an Client");
+
+    }
+    @Then("user should see the home page for client")
+    public void user_should_see_the_home_page_for_client() {
+        Assert.assertTrue("Login unsuccessful", docuportBasePage.homePage.isDisplayed());
+        LOG.info("Home Page for supervisor is displayed");
+
+
+    }
+
+
 
 
 }
