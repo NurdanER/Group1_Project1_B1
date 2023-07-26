@@ -14,8 +14,9 @@ public class DocuportBasePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//i[@class='v-icon notranslate v-icon--left mdi mdi-tray-arrow-up theme--light']")
+    @FindBy(xpath = "//i[@class='v-icon notranslate mdi mdi-home theme--light']")
     public WebElement homePage;
+    //<i aria-hidden="true" class="v-icon notranslate mdi mdi-home theme--light"></i>
     @FindBy(xpath = "//span[contains(text(),'Invitations')]")
     public WebElement invitationsButton;
     //span[contains(normalize-space(),'Continue')]           //this makes delete spaces
