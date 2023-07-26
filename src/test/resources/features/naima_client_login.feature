@@ -5,10 +5,7 @@ Feature: Docuport Login Logout Feature
 
 
   @smoke
-  Scenario: Login as a supervisor
+  Scenario: Login as a client
     Given user is on Docuport login page
-    When user enters credentials for supervisor role
-    Then user should see the home page for supervisor
-
-
-
+    When user enters credentials for client role
+    Then user should see the home page for client
