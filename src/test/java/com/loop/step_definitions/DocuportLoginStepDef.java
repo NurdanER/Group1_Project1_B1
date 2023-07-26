@@ -91,6 +91,17 @@ public class DocuportLoginStepDef {
 
 
     }
+    @When("user enters credentials for employee role")
+    public void user_enters_credentials_for_employee_role() {
+        loginPage.loginDocuport(ConfigurationReader.getProperty("employee"),ConfigurationReader.getProperty("password"));
+        LOG.info("User successfully logged in as a employee ");
+    }
+    @Then("user should see the home page for employee")
+    public void user_should_see_the_home_page_for_employee() {
+        Assert.assertTrue("Login unsuccessful", docuportBasePage.homePage.isDisplayed());
+        LOG.info("Home Page for employee is displayed");
+
+    }
 
 
 }
