@@ -34,9 +34,29 @@ public class DocuportLoginStepDef {
 
     @Then("user should see the home page for supervisor")
     public void user_should_see_the_home_page_for_supervisor() {
+
+
+        BrowserUtils.waitForVisibility(loginPage.loginButton, 10);
+        loginPage.loginButton.isDisplayed();
+
         Assert.assertTrue("Login unsuccessful", docuportBasePage.homePage.isDisplayed());
         LOG.info("Home Page for supervisor is displayed");
 
+
+
+    }
+
+    @Then("user should see the home page for advisor")
+    public void user_should_see_the_home_page_for_advisor() {
+        Assert.assertTrue( docuportBasePage.homePage.isDisplayed());
+        LOG.info("Home Page for advisor is displayed");
+
+    }
+    @When("user enters credentials for advisor role")
+    public void user_enters_credentials_for_advisor_role() {
+        loginPage.loginDocuport(ConfigurationReader.getProperty("advisor"),ConfigurationReader.getProperty("password"));
+
+        LOG.info("User successfully logged in as an Advisor");
 
     }
 
@@ -53,8 +73,6 @@ public class DocuportLoginStepDef {
 
 
     }
-
-
 
 
 
