@@ -1,10 +1,3 @@
-
-26.07.2023 12:01:30 INFO  DocuportLoginStepDef:52 - Home Page for supervisor is displayed
-26.07.2023 12:01:30 INFO  Hooks:40 - .............END AUTOMATION........LOOP ACADEMY.....
-
-
-26.07.2023 11:44:12 INFO  DocuportLoginStepDef:47 - Home Page for advisor is displayed
-26.07.2023 11:44:12 INFO  Hooks:40 - .............END AUTOMATION........LOOP ACADEMY.....
-
-26.07.2023 11:05:25 INFO  Hooks:40 - .............END AUTOMATION........LOOP ACADEMY.....
-
+26.07.2023 14:02:43 INFO  DocuportLoginStepDef:62 - User successfully logged in as an Advisor
+26.07.2023 14:02:43 INFO  DocuportLoginStepDef:54 - Home Page for advisor is displayed
+26.07.2023 14:02:43 INFO  Hooks:40 - .............END AUTOMATION........LOOP ACADEMY.....
