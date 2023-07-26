@@ -37,6 +37,7 @@ public class DocuportLoginStepDef {
     public void user_should_see_the_home_page_for_supervisor() {
         Assert.assertTrue("Login unsuccessful", docuportBasePage.homePage.isDisplayed());
 
+
     }
 
 
