@@ -41,7 +41,7 @@ public class Hooks {
 
 
 }
-    @Before ("@db")
+    @Before ("@smoke")
     public void setUpDB(){
         String ip = ConfigurationReader.getProperty("docuportUrl");
         String un = ConfigurationReader.getProperty("dbUserName");
@@ -51,7 +51,7 @@ public class Hooks {
     }
 
 
-    @After("@db")
+    @After("@smoke")
     public void destroyDB () {
         DB_Util.destroy();
     }
