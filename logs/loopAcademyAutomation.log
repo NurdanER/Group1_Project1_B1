@@ -1,3 +1,8 @@
-26.07.2023 15:46:34 INFO  DocuportLoginStepDef:97 - User successfully logged in as a employee 
+
+26.07.2023 23:04:27 INFO  NewClientStepDef:88 - User successfully logged in as a new client
+26.07.2023 23:04:27 INFO  Hooks:40 - .............END AUTOMATION........LOOP ACADEMY.....
+
+=======26.07.2023 15:46:34 INFO  DocuportLoginStepDef:97 - User successfully logged in as a employee 
 26.07.2023 15:46:35 INFO  DocuportLoginStepDef:102 - Home Page for employee is displayed
 26.07.2023 15:46:35 INFO  Hooks:40 - .............END AUTOMATION........LOOP ACADEMY.....
+
