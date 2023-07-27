@@ -103,6 +103,78 @@ public class DocuportBasePage {
    @FindBy(xpath = "//h2[contains(text(),'My')]/..")
     public WebElement myUploadsDoc;
 
+////
+
+    public void clickOption(String option) {
+        Driver.getDriver().findElement(By.xpath("//span[contains(text(),'" + option + "')]")).click();
+    }
+
+    public void rowNumber(Integer num) {
+        Driver.getDriver().findElement(By.xpath("//div[contains(text(),'" + num + "')]")).click();
+    }
+
+    @FindBy(xpath = "//div[@class='v-input__append-inner']")
+    public WebElement rowPageDropdown;
+
+    @FindBy(xpath = "//div[contains(text(),'10')]")
+    public WebElement rowPageByDefault;
+
+    @FindBy(xpath = "//div[contains(text(),'5')]")
+    public WebElement rowPageFive;
+
+    public void displayOption(String option) {
+        Driver.getDriver().findElement(By.xpath("//span[contains(text(),'" + option + "')]"));
+    }
+
+    public void titleValidate(String title) {
+        Assert.assertTrue(Driver.getDriver().findElement(By.xpath("//span[contains(text(),'" + title + "')]")).isDisplayed());
+    }
+
+
+    @FindBy(xpath = "//span[.='Clients']")
+    public WebElement clients;
+
+    @FindBy(xpath = "//span[.='Create new client']")
+    public WebElement createNewClient;
+
+    @FindBy(xpath = "//span[.='Personal']")
+    public WebElement personalDropdown;
+
+
+    public void locateInput(String input, String input2) {
+        Driver.getDriver().findElement(By.xpath("//label[.='" + input + "']/following-sibling::input")).sendKeys(input2);
+        BrowserUtils.justWait(3);
+    }
+
+    @FindBy(xpath = "//div[@class='v-input--selection-controls__ripple']")
+    public WebElement createNewUserCheckBox;
+
+    @FindBy(xpath = "//label[.='Advisor']/../div/div")
+    public WebElement advisorDropdown;
+
+    @FindBy(xpath = "//div[contains(text(),'Batch1 Group1')]")
+    public WebElement Batch1group1Option;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement saveButton;
+
+    @FindBy(xpath = "//label[.='Advisor']/../div/following-sibling::div")
+    public WebElement secondAdvisor;
+
+    @FindBy(xpath = "//label[.= 'Services']/following-sibling::div/div")
+    public WebElement services;
+
+    @FindBy(xpath = "//div[contains(text(),'Payroll')]/../../div/div/div")
+    public WebElement payroll;
+
+    @FindBy(xpath = "//span[contains(text(),'Log out')]")
+    public WebElement logout;
+
+    @FindBy(xpath = "//span[contains(text(),'Search')]")
+    public WebElement search;
+
+    @FindBy(xpath = "//span[@class='subtitle-2 text-none pl-2 pr-3 gray--text text--darken-3']")
+    public WebElement profile;
 
 
 
