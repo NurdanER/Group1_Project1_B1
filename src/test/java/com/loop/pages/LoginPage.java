@@ -38,7 +38,7 @@ public void loginDocuport (String username, String password) {
     usernameInput.sendKeys(username);
     passwordInput.clear();
     passwordInput.sendKeys(password);
-    BrowserUtils.waitForClickable(loginButton,10);
+    BrowserUtils.waitForClickable(loginButton,5);
     BrowserUtils.clickWithJS(loginButton);
 
 }
