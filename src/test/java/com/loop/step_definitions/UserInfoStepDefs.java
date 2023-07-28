@@ -38,10 +38,9 @@ public class UserInfoStepDefs {
         System.out.println("Expected: " + expectedResult);
     }
 
-    @When("I execute the query to get all columns for the {string} table")
-    public void iExecuteTheQueryToGetAllColumnsForTheTable(String documentUsers) {
-        // I execute the query to get all columns for the "document.users" table
-        DB_Util.runQuery("select * from " +documentUsers + " order by id");
+    @When("I execute the query to get all columns for the {string} where first name {string}")
+    public void iExecuteTheQueryToGetAllColumnsForTheWhereFirstName(String documentUsers , String batch1) {
+        DB_Util.runQuery("SELECT * FROM " + documentUsers + " WHERE first_name = '" + batch1 + "' ORDER BY id;");
         actualResult2 = DB_Util.getColumnDataAsList("id");
     }
     @Then("Verify the below columns are listed in result for id")
