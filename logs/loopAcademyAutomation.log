@@ -1,1 +1,5 @@
-29.07.2023 16:16:26 INFO  Hooks:40 - .............END AUTOMATION........LOOP ACADEMY.....
+29.07.2023 16:28:06 INFO  ValidateButtonsStepDef:36 - User clicks Users successfully
+29.07.2023 16:28:06 INFO  ValidateRowsPerPageStepDef:21 - Rows Per Page shows by default 10 on a Users page
+29.07.2023 16:28:06 INFO  ValidateRowsPerPageStepDef:28 - User changes number to 5
+29.07.2023 16:28:06 INFO  ValidateRowsPerPageStepDef:35 - Rows Per Page shows by default 5 on a Users page
+29.07.2023 16:28:07 INFO  Hooks:40 - .............END AUTOMATION........LOOP ACADEMY.....
