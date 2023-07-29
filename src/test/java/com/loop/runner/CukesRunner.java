@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;  //coming from junit
         features = "src/test/resources/features",
         glue = "com/loop/step_definitions",
         dryRun = false,
-        tags = "@smoke",
+        tags = "@va",
         monochrome = true,
         publish = false
 )
