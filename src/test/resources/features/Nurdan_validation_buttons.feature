@@ -3,7 +3,7 @@ Feature: Validate Buttons
     Given user is on Docuport login page
 
 
-  @va
+  @smoke
   Scenario Outline: login Docuport
     When user enters "<username>" and "<password>" credentials
     And user clicks on "Receiveddocs" item
