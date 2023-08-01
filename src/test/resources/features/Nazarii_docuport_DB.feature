@@ -12,3 +12,4 @@ Feature: As a data consumer, I want the department information stored in postgre
       | bookkeeping          |
       | payroll              |
       | consultancy-services |
+
