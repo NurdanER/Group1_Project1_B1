@@ -34,19 +34,19 @@ public class DocuportBasePage {
                 invitationsButton.click();
                 break;
             case "receiveddocs":
-                BrowserUtils.waitForVisibility(receivedDocsPage,7);
-                receivedDocsPage.click();
+
+                BrowserUtils.clickWithJS(receivedDocsPage);
                 break;
             case "myuploads":
-                BrowserUtils.waitForVisibility(myUploadsPage,7);
-                myUploadsPage.click();
+
+               BrowserUtils.clickWithJS(myUploadsPage);
                 break;
             case"leads":
                  leadsPage.click();
                  break;
             case"users":
-                BrowserUtils.waitForVisibility(usersPage,7);
-                usersPage.click();
+
+                BrowserUtils.clickWithJS(usersPage);
                 break;
 
         }
