@@ -23,7 +23,7 @@ public class ValidateButtonsStepDef {
         loginPage.passwordInput.sendKeys(password);
         BrowserUtils.justWait(5);
         BrowserUtils.clickWithJS(loginPage.loginButton);
-
+        BrowserUtils.justWait(7);
         if (username.equals("b1g1_client@gmail.com")) {
             docuportBasePage.continueB.click();
             BrowserUtils.justWait(7);
