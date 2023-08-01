@@ -31,8 +31,8 @@ public class ValidateButtonsStepDef {
     }
     @When("user clicks on {string} item")
     public void user_clicks_on_item(String button) {
-        docuportBasePage.clickButton(button);
         BrowserUtils.justWait(7);
+        docuportBasePage.clickButton(button);
         LOG.info("User clicks " +button+ " successfully");
     }
 
