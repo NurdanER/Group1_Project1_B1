@@ -21,8 +21,9 @@ public class ValidateButtonsStepDef {
     public void user_enters_and_credentials(String username, String password) {
         loginPage.usernameInput.sendKeys(username);
         loginPage.passwordInput.sendKeys(password);
-        BrowserUtils.clickWithJS(loginPage.loginButton);
         BrowserUtils.justWait(5);
+        BrowserUtils.clickWithJS(loginPage.loginButton);
+
         if (username.equals("b1g1_client@gmail.com")) {
             docuportBasePage.continueB.click();
             BrowserUtils.justWait(7);
